@@ -153,6 +153,20 @@
   <ItemGroup>
     <ClCompile Include="Bakery.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="_input\0.txt" />
+    <Text Include="_input\1.txt" />
+    <Text Include="_input\2.txt" />
+    <Text Include="_input\3.txt" />
+    <Text Include="_input\4.txt" />
+    <Text Include="_input\5.txt" />
+    <Text Include="_output\0.txt" />
+    <Text Include="_output\1.txt" />
+    <Text Include="_output\2.txt" />
+    <Text Include="_output\3.txt" />
+    <Text Include="_output\4.txt" />
+    <Text Include="_output\5.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

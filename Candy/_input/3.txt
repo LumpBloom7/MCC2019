@@ -1,0 +1,1 @@
+shouts = ["odd", "odd", "odd", "even", "even", "even", "odd", "odd", "even", "even", "odd", "even", "even", "odd", "even", "odd", "odd", "even", "odd", "odd"]
