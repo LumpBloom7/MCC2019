@@ -19,19 +19,18 @@ int main() {
 		}
 
 		std::sort(prices.begin(), prices.end()); // Sort the array once.
-		std::cout << std::endl;
 
 		// We don't want to modify the array in any way for efficiency purposes, so we keep iterators to the smallest and largest values in it.
-		auto left = 0;
-		auto right = prices.size() - 1;
+		auto left = prices.begin();
+		auto right = prices.end() - 1;
 
 		size_t maxCost = 0;
 
 		// It's pretty straight forward. We add the current smallest value, and the first and second largest, then ignore the third largest. Make sure to move the iterators.
-		while (left != right) {
-			maxCost += prices[left++];
-			maxCost += prices[right--];
-			maxCost += prices[right--];
+		while (left < right) {
+			maxCost += *(left++);
+			maxCost += *(right--);
+			maxCost += *(right--);
 			--right;
 		}
 

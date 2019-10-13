@@ -1,1 +1,1 @@
-shouts = ["odd", "odd", "odd", "even", "odd"]
+odd odd odd even odd

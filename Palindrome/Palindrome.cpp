@@ -61,5 +61,7 @@ int main() {
 		// If width is odd, we omit the first digit of this palindrome, before printing the half as normal; If the width is even, we print the half in full.
 		for (auto it = palindrome.begin() + ((width % 2 == 1) ? 1 : 0); it < palindrome.end(); ++it)
 			std::cout << *it;
+
+		std::cout << std::endl;
 	}
 }

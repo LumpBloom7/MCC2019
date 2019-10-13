@@ -14,7 +14,7 @@ int main() {
 		std::string string{};
 		size_t k;
 
-		std::ifstream input("input.txt");
+		std::ifstream input(file);
 		input >> string >> k;
 
 		size_t longest = 0;

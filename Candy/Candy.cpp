@@ -12,7 +12,7 @@ int main() {
 
 		std::ifstream input(file);
 		while (true) {
-			size_t tmp;
+			std::string tmp;
 			input >> tmp;
 			shouts.emplace_back(tmp);
 			if (input.eof()) break;
