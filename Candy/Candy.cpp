@@ -1,18 +1,32 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
+#include <filesystem>
+#include "../_include/getExePath.h"
 
 int main() {
-	std::vector<std::string> shouts = { "odd", "odd", "odd", "odd", "even", "odd", "even", "even", "odd", "odd", "even", "even", "odd", "odd", "even", "odd", "odd", "odd", "odd", "odd", "even", "odd", "even", "even", "odd", "odd", "even", "odd", "even", "odd", "odd", "odd", "even", "odd", "even", "odd", "even", "odd", "even", "even", "odd", "even", "odd", "even", "even", "even", "odd", "odd", "even", "odd", "even", "odd", "even", "even", "even", "even", "odd", "even", "even", "even" };
+	std::filesystem::path inputDir = std::filesystem::path(getExePath()) / "Input" / "Candy";
+	for (auto& file : std::filesystem::directory_iterator(inputDir)) {
+		std::vector<std::string> shouts{};
 
-	size_t currentPosition = 1; // We end at one.
+		std::ifstream input(file);
+		while (true) {
+			size_t tmp;
+			input >> tmp;
+			shouts.emplace_back(tmp);
+			if (input.eof()) break;
+		}
 
-	// We are simply gonna reverse the process
-	for (auto i = shouts.rbegin(); i < shouts.rend(); ++i) {
-		if (*i == "odd") // If odd is shouted, our current position is guaranteed to double
-			currentPosition += currentPosition;
-		else if (*i == "even" && currentPosition > 0) // If even is shouted and we aren't in the first spot, the people in front of us is doubled.
-			currentPosition += currentPosition - 1;
+		size_t currentPosition = 1; // We end at one.
+
+		// We are simply gonna reverse the process
+		for (auto i = shouts.rbegin(); i < shouts.rend(); ++i) {
+			if (*i == "odd") // If odd is shouted, our current position is guaranteed to double
+				currentPosition += currentPosition;
+			else if (*i == "even" && currentPosition > 0) // If even is shouted and we aren't in the first spot, the people in front of us is doubled.
+				currentPosition += currentPosition - 1;
+		}
+		std::cout << currentPosition << std::endl;
 	}
-	std::cout << currentPosition << std::endl;
 }
