@@ -7,7 +7,7 @@
 int main() {
 	size_t oCount = 0;
 
-	std::string string{}; // Using bool vector since this is a binary string, and we'll save on a bit of RAM
+	std::string string{};
 	size_t k = 200366;
 
 	// Using this special input method because the input length could be problematic for some compilers, we're gonna read from file instead.
