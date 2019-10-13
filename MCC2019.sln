@@ -20,6 +20,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Problem Statements", "_Problem Statements", "{F43625EB-2794-4F8D-B2AE-D274B76F2550}"
+	ProjectSection(SolutionItems) = preProject
+		_Problem Statements\Ascending.md = _Problem Statements\Ascending.md
+		_Problem Statements\Bakery.md = _Problem Statements\Bakery.md
+		_Problem Statements\Candy.md = _Problem Statements\Candy.md
+		_Problem Statements\Ditcoin.md = _Problem Statements\Ditcoin.md
+		_Problem Statements\Elimination.md = _Problem Statements\Elimination.md
+		_Problem Statements\Palindrome.md = _Problem Statements\Palindrome.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -79,6 +89,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F43625EB-2794-4F8D-B2AE-D274B76F2550} = {DDFB3E8B-2DDF-4184-AC00-AFA02BD4FE70}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {035DC56C-4DF5-4FCC-A978-F3D8D3790634}
