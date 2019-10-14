@@ -22,10 +22,8 @@ int main() {
 
 		// It's always ascending, so we don't need to sort
 		// We also don't have to compare a value with every other values, we only need to compare adjacent values
-		for (auto i = numbers.begin() + 1; i < numbers.end(); ++i) {
-			int tmp = *i - *(i - 1);
+		for (auto i = numbers.begin() + 1; i < numbers.end(); ++i)
 			smallest = (*i - *(i - 1) < smallest ? *i - *(i - 1) : smallest);
-		}
 
 		std::cout << smallest << std::endl;
 	}
